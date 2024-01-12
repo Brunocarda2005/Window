@@ -1,0 +1,16 @@
+.footer {
+  height: 5rem;
+  position: relative;
+  background-color: var(--color-sexto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+  color: var(--color-principal);
+}
+
+.footer-img {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}

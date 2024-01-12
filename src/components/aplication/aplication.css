@@ -1,0 +1,18 @@
+.app__aplications {
+  position: absolute;
+  width: 30%;
+  height: calc(100% - 2.8rem);
+}
+
+.app__aplications__content {
+  display: grid;
+  grid-auto-flow: row;
+  gap: .8rem;
+  padding: 1rem;
+}
+
+.app__aplications__content__link {
+  outline: 2px solid blue;
+  width: 100%;
+  height: 100%;
+}

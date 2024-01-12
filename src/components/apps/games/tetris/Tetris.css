@@ -1,0 +1,36 @@
+.app__games__tetris {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #000000;
+  z-index: 9999999999999999999999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.app__games__tetris__content-game {
+  width: 19.3rem;
+  height: 30.3rem;
+  border: 2px solid #ff0000;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  background-image: linear-gradient(#ffffff00 1px, transparent 1px),
+    linear-gradient(to right, #ffffff5e 1px, #e5e5f700 1px);
+  background-size: 20px 20px;
+}
+
+.app__games__tetris__content-game__part {
+  position: relative;
+}
+
+.app__games__tetris__content-game__play {
+  display: none;
+}
+
+.app__games__tetris__pointer {
+  color: aliceblue;
+}

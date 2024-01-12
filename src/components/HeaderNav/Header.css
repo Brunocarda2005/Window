@@ -1,0 +1,35 @@
+.app_header__content {
+  display: flex;
+  z-index: 2;
+  gap: .5rem;
+}
+
+.app_header__content__icone {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  height: 2.3rem;
+  width: 2.5rem;
+  border-radius: 0.2rem;
+}
+
+.app_header__content__icone:hover {
+  background-color: rgba(255, 255, 255, 0.067);
+  outline: 1.7px solid #ffffff25;
+}
+
+.app_header__content__icone#true {
+  background-color: rgba(255, 255, 255, 0.067);
+  outline: 1.7px solid #ffffff25;
+}
+
+.app_header__content__icone__span#true {
+  width: 40%;
+  height: .2rem;
+  border-radius: 1rem;
+  position: absolute;
+  background-color: #ffffff4d;
+  transition: all .1s ease-in-out;
+}

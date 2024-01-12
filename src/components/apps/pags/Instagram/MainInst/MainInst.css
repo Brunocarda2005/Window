@@ -1,0 +1,174 @@
+.main__instagram {
+  color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 90%;
+  height: 100%;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.main_instagram_user {
+  width: 100%;
+}
+.main_instagram_user_content-profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main_instagram_user_content-profile_profile {
+  width: 5rem;
+  overflow: hidden;
+}
+.main_instagram_user_content-profile_profile img {
+  border-radius: 100%;
+  width: 100%;
+}
+
+.main_instagram_user_content-profile_content {
+  width: 100%;
+}
+.main_instagram_user_content-profile_content_btnSeguir {
+  width: 100%;
+  max-width: 15rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.2rem;
+  background-color: #0095f6;
+  border-radius: var(--border-radius-med);
+  margin-top: 0.4rem;
+}
+
+.main_instagram_user_content-data_info {
+  font-size: 0.8em;
+  margin-top: 0.9rem;
+  padding-left: 0.2rem;
+  text-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.main_instagram_user_content-data_info_blog {
+  color: #8b8b8b;
+}
+
+.main_instagram_user_content-data_info_portofolio {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--color-principal);
+  font-weight: 800;
+}
+.main_instagram_user_content-data_info_portofolio_img {
+  width: 1rem;
+}
+
+@media (min-width: 500px) {
+  .main_instagram_user_content-profile {
+    align-items: center;
+  }
+  .main_instagram_user_content-profile_profile {
+    width: 7rem;
+  }
+  .main_instagram_user_content-profile {
+    flex-direction: row;
+  }
+}
+
+/* ================================ seguidres ========================= */
+.main_instagram_seguidores-content {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid #5d5d5d;
+  border-bottom: 1px solid #5d5d5d;
+  display: flex;
+  justify-content: center;
+}
+
+.main_instagram_seguidores-content_content {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+}
+.seguidores_style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.68em;
+}
+
+/* ================================ publicaciones ======================*/
+.main_instagram_publicaciones {
+  margin-top: 2rem;
+  padding: 0.2rem;
+}
+
+.main_instagram_publicaciones_cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 500px) {
+  .main_instagram_publicaciones_cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .carrucel_img {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 10rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  .main_instagram_publicaciones_card_img img {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+  }
+}
+
+@media (min-width: 700px) {
+  .main_instagram_publicaciones_cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.carrucel {
+  place-self: center;
+  width: 8rem;
+  height: 8rem;
+  overflow-x: hidden;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  position: relative;
+}
+.carrucel:hover .carrucel_show {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.232);
+  z-index: 4;
+}
+.carrucel_img {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 8rem;
+  transition: transform 0.3s ease-in-out;
+}
+.main_instagram_publicaciones_card_img img {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+}
+.active {
+  transform: translateX(-100%);
+}

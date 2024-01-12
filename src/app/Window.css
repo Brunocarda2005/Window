@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  /* colors */
+
+  --color-principal: #d8d8d8;
+  --color-secundario: #5c77ff;
+  --color-terciario: #dfecff;
+  --color-cuarto: #717d91;
+  --color-quinto: #121212;
+  --color-sexto: #151516;
+
+  /* border */
+
+  --border-radius-max: 20px;
+  --border-radius-med: 7px;
+  --border-radius-min: 2px;
+
+  /* box shadow */
+
+  --box-shadow: 0 0 10px 2px #0000001a;
+
+  /* font-size */
+
+  --font-size-max: 2em;
+  --font-size-med: 1.3em;
+  --font-size-med_min: 0.8em;
+  --font-size-min: 0.7em;
+}
+
+* {
+  font-family: "Roboto";
+  box-sizing: border-box;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+  animation-name: startScroll;
+  animation-duration: 14s;
+  animation-fill-mode: forwards;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--color-sexto);
+}
+
+.app__background {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-sexto);
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.app__background__window {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3rem;
+}
+.app__background__window__span {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--border-radius-min);
+  background-color: var(--color-secundario);
+  box-shadow: 0 0 10px #000000a0;
+}
+
+.app__header {
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  border-top: 1.5px solid #5c77ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.243); /* Sombra */
+}
+.app__header__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background-color: #5c77ff6f;
+}
+.app__header__background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: repeating-conic-gradient(
+    rgba(26, 26, 26, 0.152) 0.00000045%,
+    #0000000a 0.00005%
+  );
+}
+
+.app__header__icone {
+  height: 2.3rem;
+  width: 2.5rem;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.app__header__icone:hover {
+  background-color: rgba(255, 255, 255, 0.109);
+  border: 1.7px solid #ffffff18;
+}
+
+.header_window {
+  gap: 0.09rem;
+}
+.header_window .app__background__window__span {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-principal);
+  border-radius: 0.07rem;
+  box-shadow: none;
+}

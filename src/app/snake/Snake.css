@@ -1,0 +1,47 @@
+.app__games__snake {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 999999999999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #83dc43;
+  
+}
+
+.app__games__snake__content {
+  width: 85%;
+  height: 80%;
+  border-radius: 1rem;
+  outline: 2px solid #17a617;
+  position: relative;
+  background-image: repeating-linear-gradient(
+      45deg,
+      #17a617 25%,
+      transparent 25%,
+      transparent 75%,
+      #17a617 75%,
+      #17a617
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #17a617 25%,
+      #69f009 25%,
+      #69f009 75%,
+      #17a617 75%,
+      #17a617
+    );
+  background-position: 0 0, 24px 24px;
+  background-size: 48px 48px;
+}
+
+.app__games__snake__content__snake {
+  width: 10rem;
+  height: 1rem;
+  position: absolute;
+  background-color: red;
+  transition: transform 1s ease-in-out;
+}
+
+

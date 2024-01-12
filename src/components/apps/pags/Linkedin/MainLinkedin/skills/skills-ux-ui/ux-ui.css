@@ -1,0 +1,50 @@
+.Figma_card {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: var(--color-sexto);
+  opacity: 1;
+  z-index: -1;
+  border-radius: var(--border-radius-min);
+}
+
+.Figma_card::after {
+  content: "50%";
+  position: relative;
+  top: 100%;
+  left: 85%;
+}
+
+.Git_card {
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background: var(--color-sexto);
+  opacity: 1;
+  z-index: -1;
+  border-radius: var(--border-radius-min);
+}
+
+.Git_card::after {
+  content: "30%";
+  position: relative;
+  top: 100%;
+  left: 85%;
+}
+
+.Github_card {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: var(--color-sexto);
+  opacity: 1;
+  z-index: -1;
+  border-radius: var(--border-radius-min);
+}
+
+.Github_card::after {
+  content: "20%";
+  position: relative;
+  top: 100%;
+  left: 85%;
+}

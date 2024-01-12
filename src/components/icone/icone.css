@@ -1,0 +1,36 @@
+.app__icone {
+  max-width: 7ch;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2rem;
+}
+
+.app__icone__name {
+  color: var(--color-principal);
+  text-shadow: 0 0 3px #000;
+  font-size: 0.5rem;
+  max-width: 15ch;
+  text-wrap: wrap;
+}
+
+.window:hover {
+  background-color: #ffffff1a;
+}
+
+.header {
+  height: 2.3rem;
+  width: 2.5rem;
+  border-radius: 0.2rem;
+}
+
+.header img {
+  width: 1.7rem;
+}
+
+.header p {
+  display: none;
+}
+
