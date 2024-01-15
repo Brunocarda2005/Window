@@ -1,4 +1,4 @@
-.google {
+.app__google {
   z-index: 9;
   outline: 2px solid rgba(139, 139, 139, 0.511);
   overflow: hidden;
@@ -8,25 +8,6 @@
   background-color: var(--color-quinto);
 }
 
-.app_exp-false {
-  width: 70vw;
-  height: 70vh;
-  max-height: calc(100% - 3rem);
-  border-radius: 0.5rem;
-  position: absolute;
-  top: 10%;
-  left: 40%;
-}
-
-.app_exp-true {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100vw;
-  min-width: 100vw;
-  min-height: calc(100% - 3rem);
-}
-
 .google-content {
   width: 100%;
   height: calc(100% - 4rem);
@@ -34,46 +15,4 @@
   display: flex;
   z-index: 3;
   overflow-x: hidden;
-}
-
-#app_true {
-  animation-name: open;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
-}
-
-#app_false {
-  animation-name: close;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes close {
-  0% {
-    scale: 100%;
-    position: absolute;
-  }
-  90% {
-    scale: 10%;
-    position: absolute;
-    top: calc(100% - 2rem);
-  }
-  100% {
-    width: 1rem;
-    height: 1rem;
-    min-width: 1rem;
-    min-height: 1rem;
-    border-radius: 0.2px;
-    position: absolute;
-    top: calc(100% - 2rem);
-  }
-}
-
-@keyframes open {
-  100% {
-    width: 70vw;
-    height: 70vh;
-    max-height: calc(100% - 3rem);
-    position: absolute;
-  }
 }

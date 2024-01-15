@@ -1,0 +1,23 @@
+.app__background {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-sexto);
+  background-repeat: no-repeat;
+}
+
+.app__background__window {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3rem;
+}
+.app__background__window__span {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--border-radius-min);
+  background-color: var(--color-secundario);
+  box-shadow: 0 0 10px #000000a0;
+}

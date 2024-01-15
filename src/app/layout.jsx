@@ -1,7 +1,7 @@
-import "./Window.css";
 import Aplications from "../components/aplication/Aplication";
 import Header from "../components/HeaderNav/Header";
 import UseState from "../components/Context/UseContext";
+import Background from "../components/background/background"
 
 export const metadata = {
   title: "Next.js",
@@ -13,14 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <main className="app">
-          <section className="app__background">
-            <div className="app__background__window">
-              <span className="app__background__window__span"></span>
-              <span className="app__background__window__span"></span>
-              <span className="app__background__window__span"></span>
-              <span className="app__background__window__span"></span>
-            </div>
-          </section>
+          <Background/>
           <UseState>
             <Aplications />
             {children}

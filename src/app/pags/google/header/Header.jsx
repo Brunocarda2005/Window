@@ -1,25 +1,31 @@
+"use client";
 import "./header.css";
 import Image from "next/image";
-import logo from "../../static/svg/next-js.svg";
-import arrowL from "../../static/svg/arrow-sm-left-svgrepo-com.svg";
-import arrowR from "../../static/svg/arrow-sm-right-svgrepo-com.svg";
-import reload from "../../static/svg/reload-svgrepo-com.svg";
-import alert from "../../static/svg/alert.svg";
-import user from "../../static/svg/config.svg";
+import { useContext, useRef, useEffect, useState } from "react";
+import logo from "../../../../components/static/svg/next-js.svg";
+import arrowL from "../../../../components/apps/google/static/svg/arrow-sm-left-svgrepo-com.svg";
+import arrowR from "../../../../components/apps/google/static/svg/arrow-sm-right-svgrepo-com.svg";
+import reload from "../../../../components/apps/google/static/svg/reload-svgrepo-com.svg";
+import alert from "../../../../components/apps/google/static/svg/alert.svg";
+import user from "../../../../components/apps/google/static/svg/config.svg";
 import Actions from "./actionsTop/Actions";
-import { useContext } from "react";
 import Context from "../../../../components/Context/Context";
 import useClose from "../../../../components/hooks/close/useClose";
 import useMove from "../../../../components/hooks/move/useMove";
 
-
-export default function HeaderGoogle(params) {
+export default function HeaderGoogle() {
   const { StateGlobal } = useContext(Context);
+  const [width, setWidth] = useState(0);
   const { Close } = useClose();
-  const { moveHeader, setMoveAct } = useMove(params.Width.current);
+  const Element = useRef(null);
+
+  useEffect(() => {
+    setWidth(Element.current.parentNode.offsetWidth);
+  }, [Element]);
+  const { moveHeader, setMoveAct } = useMove(width);
 
   return (
-    <header className="google-header">
+    <header className="google-header" ref={Element}>
       <section className="google-header-web">
         <aside
           className="google-header-web-info"
@@ -59,6 +65,7 @@ export default function HeaderGoogle(params) {
         <aside className="google-header-serch-arrow">
           <picture className="google-header-serch-arrow-img_content">
             <Image
+              width={20}
               className="google-header-serch-arrow-img_content-img"
               src={arrowL}
               alt=""
@@ -66,6 +73,7 @@ export default function HeaderGoogle(params) {
           </picture>
           <picture className="google-header-serch-arrow-img_content">
             <Image
+              width={20}
               className="google-header-serch-arrow-img_content-img"
               src={arrowR}
               alt=""
@@ -73,6 +81,7 @@ export default function HeaderGoogle(params) {
           </picture>
           <picture className="google-header-serch-arrow-img_content">
             <Image
+              width={20}
               className="google-header-serch-arrow-img_content-img reload"
               src={reload}
               alt=""
@@ -82,6 +91,7 @@ export default function HeaderGoogle(params) {
         <aside className="google-header-serch-input">
           <div className="google-header-serch-input-content">
             <Image
+              width={20}
               className="google-header-serch-input-content-img"
               src={alert}
               alt=""
@@ -98,6 +108,7 @@ export default function HeaderGoogle(params) {
         <aside className="google-header-serch-profile">
           <picture className="google-header-serch-profile-user">
             <Image
+              width={20}
               className="google-header-serch-profile-user-img"
               src={user}
               alt="user bruno cardamone google"

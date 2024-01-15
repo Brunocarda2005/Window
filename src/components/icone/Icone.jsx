@@ -14,7 +14,11 @@ export default function Configure(params) {
           params.name === "Portofolio",
           StateGlobal.aplications.google[1],
         ],
-        text: [params.name === "Explication", StateGlobal.aplications.text[1]],
+        text: [
+          params.name === "Explication",
+          StateGlobal.aplications.text[1],
+          StateGlobal.aplications.text[2],
+        ],
         configure: [
           params.name === "Configuracion",
           StateGlobal.aplications.configure[1],
@@ -47,6 +51,8 @@ export default function Configure(params) {
       <aside className={`app__icone ${params.use} `} onClick={ChangeAPP}>
         <picture>
           <Image
+            width={"auto"}
+            height={"auto"}
             className="app__icone__img"
             src={params.img}
             alt={params.alt}

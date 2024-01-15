@@ -5,6 +5,7 @@ import Context from "../../Context/Context";
 export default function useClose() {
   const { StateGlobal, setStateGlobal } = useContext(Context);
   const Close = (cl, exp, nameApp) => {
+    console.log(nameApp);
     if (exp) {
       setStateGlobal({
         app: {
@@ -17,13 +18,16 @@ export default function useClose() {
             nameApp === "portofolio"
               ? [cl, exp]
               : StateGlobal.aplications.google,
-          text: nameApp === "text" ? [cl, exp] : StateGlobal.aplications.text,
+          text:
+            nameApp === "text"
+              ? [cl, exp, StateGlobal.aplications.text[2]]
+              : StateGlobal.aplications.text,
           configure:
             nameApp === "configure"
               ? [cl, exp]
               : StateGlobal.aplications.configure,
           games:
-            nameApp === "games"
+            nameApp === "folder"
               ? [cl, exp, StateGlobal.aplications.games[2]]
               : StateGlobal.aplications.games,
           window:
@@ -55,13 +59,18 @@ export default function useClose() {
             nameApp === "portofolio"
               ? [cl, exp]
               : StateGlobal.aplications.google,
-          text: nameApp === "text" ? [cl, exp] : StateGlobal.aplications.text,
+          text:
+            nameApp === "text"
+              ? [cl, exp, StateGlobal.aplications.text[2]]
+              : StateGlobal.aplications.text,
           configure:
             nameApp === "configure"
               ? [cl, exp]
               : StateGlobal.aplications.configure,
           games:
-            nameApp === "games" ? [cl, exp] : StateGlobal.aplications.games,
+            nameApp === "folder"
+              ? [cl, exp, StateGlobal.aplications.games[2]]
+              : StateGlobal.aplications.games,
           window:
             nameApp === "window" ? [cl, exp] : StateGlobal.aplications.window,
         },

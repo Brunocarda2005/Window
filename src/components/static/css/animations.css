@@ -57,4 +57,5 @@
   width: 100vw;
   min-width: 100vw;
   min-height: calc(100% - 3rem);
+  border-radius: 0;
 }
