@@ -5,7 +5,6 @@ import Context from "../../Context/Context";
 export default function useClose() {
   const { StateGlobal, setStateGlobal } = useContext(Context);
   const Close = (cl, exp, nameApp) => {
-    console.log(nameApp);
     if (exp) {
       setStateGlobal({
         app: {
@@ -23,15 +22,14 @@ export default function useClose() {
               ? [cl, exp, StateGlobal.aplications.text[2]]
               : StateGlobal.aplications.text,
           configure:
-            nameApp === "configure"
+            nameApp === "config"
               ? [cl, exp]
               : StateGlobal.aplications.configure,
           games:
             nameApp === "folder"
               ? [cl, exp, StateGlobal.aplications.games[2]]
               : StateGlobal.aplications.games,
-          window:
-            nameApp === "window" ? [cl, exp] : StateGlobal.aplications.window,
+          window: nameApp === "window" ? !cl : StateGlobal.aplications.window,
         },
         Google: {
           Instagram: {
@@ -64,15 +62,14 @@ export default function useClose() {
               ? [cl, exp, StateGlobal.aplications.text[2]]
               : StateGlobal.aplications.text,
           configure:
-            nameApp === "configure"
+            nameApp === "config"
               ? [cl, exp]
               : StateGlobal.aplications.configure,
           games:
             nameApp === "folder"
               ? [cl, exp, StateGlobal.aplications.games[2]]
               : StateGlobal.aplications.games,
-          window:
-            nameApp === "window" ? [cl, exp] : StateGlobal.aplications.window,
+          window: nameApp === "window" ? !cl : StateGlobal.aplications.window,
         },
         Google: {
           Instagram: {

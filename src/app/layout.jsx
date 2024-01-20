@@ -1,7 +1,4 @@
-import Aplications from "../components/aplication/Aplication";
-import Header from "../components/HeaderNav/Header";
-import UseState from "../components/Context/UseContext";
-import Background from "../components/background/background"
+import MainNav from "../components/main/Main"
 
 export const metadata = {
   title: "Next.js",
@@ -12,14 +9,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className="app">
-          <Background/>
-          <UseState>
-            <Aplications />
-            {children}
-            <Header />
-          </UseState>
-        </main>
+        <MainNav>
+          {children}
+        </MainNav>
       </body>
     </html>
   );

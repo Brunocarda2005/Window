@@ -1,3 +1,180 @@
 .app__config {
-  background-color: red;
+  background-color: var(--color-background-window);
+  outline: 1.4px solid rgba(139, 139, 139, 0.323);
+  overflow: hidden;
+  backdrop-filter: blur(70px);
+}
+
+.app__config__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: repeating-conic-gradient(
+    #1a1a1a11 0.00000045%,
+    #00000012 0.00005%
+  );
+}
+
+.app__config__content__header {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__config__content__header__menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.app__config__content__header__menu__burger {
+  width: 100%;
+  .app__config__content__header__menu__burger__content {
+    width: 2rem;
+    height: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+    &&:hover {
+      background-color: var(--color-principal-background);
+    }
+    span {
+      width: 1rem;
+      height: 1.5px;
+      background-color: var(--color-principal);
+      opacity: 0.7;
+      position: absolute;
+      border-radius: 1rem;
+      &&::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-principal);
+        position: absolute;
+        border-radius: 1rem;
+        transform: translateY(250%);
+      }
+      &&::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-principal);
+        position: absolute;
+        border-radius: 1rem;
+        transform: translateY(-250%);
+      }
+    }
+  }
+}
+
+.app__config__content__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.app__config__content__content__cards-content {
+  width: 80%;
+}
+
+.app__config__content__content__cards-content__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.3rem;
+  .app__config__content__content__cards-content__header__text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.app__config__content__content__cards-content__header__img {
+  width: 8rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  outline: 3px solid #000;
+}
+
+.app__config__content__content__cards-content__header__text {
+  font-size: 0.7em;
+  color: var(--color-principal);
+}
+.app__config__content__content__cards-content__header__text__name {
+  font-size: 1.3em;
+}
+.app__config__content__content__cards-content__header__text__info {
+  color: var(--color-principal);
+  opacity: 0.5;
+}
+.app__config__content__content__cards-content__header__text__change {
+  color: var(--color-secundario);
+  opacity: 0.8;
+}
+
+.app__config__content__content__cards-content__card {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.app__config__content__content__cards-content__card__content {
+  width: 100%;
+  min-height: 7rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  box-shadow: 0 0 4px #00000041;
+}
+
+.app__config__content__content__cards-content__card__content__header {
+  height: 5rem;
+  background-color: var(--color-gray);
+  color: var(--color-principal);
+  font-weight: 500;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  padding-left: 0.7rem;
+}
+
+.app__config__content__content__cards-content__card__content__list-content__ul {
+  li {
+    width: 100%;
+    height: 2rem;
+    background-color: var(--color-gray);
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding-left: 0.7rem;
+    color: var(--color-principal);
+    font-size: 0.6em;
+    position: relative;
+    &&::after {
+      content: "";
+      width: 5px;
+      height: 2px;
+      background-color: var(--color-principal);
+      position: absolute;
+      right: 3%;
+      border-radius: 10rem;
+      transform: translateY(-100%) rotate(45deg);
+    }
+    &&::before {
+      content: "";
+      width: 5px;
+      height: 2px;
+      background-color: var(--color-principal);
+      position: absolute;
+      right: 3%;
+      border-radius: 10rem;
+      transform: rotate(0) translateY(50%) rotate(-45deg);
+    }
+  }
 }

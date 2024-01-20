@@ -1,6 +1,6 @@
 .app_header__content {
   display: flex;
-  z-index: 2;
+  z-index: 10;
   gap: .5rem;
 }
 

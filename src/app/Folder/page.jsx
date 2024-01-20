@@ -1,6 +1,7 @@
 "use client";
 import { useContext } from "react";
 import "./folder.css";
+import "../Window.css"
 import "../../components/static/css/animations.css";
 import Context from "../../components/Context/Context";
 import HeaderFolder from "./headerFolder/HeaderFolder";

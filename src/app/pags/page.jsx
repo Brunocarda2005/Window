@@ -1,4 +1,4 @@
-import Google from "./google/google/Google";
+import "../Window.css"
 
 export default function GooglePage() {
   return <h1>fd</h1>;

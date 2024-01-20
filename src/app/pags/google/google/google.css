@@ -1,5 +1,5 @@
 .app__google {
-  z-index: 9;
+  z-index: 1;
   outline: 2px solid rgba(139, 139, 139, 0.511);
   overflow: hidden;
   scroll-behavior: smooth;

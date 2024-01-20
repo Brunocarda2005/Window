@@ -14,7 +14,7 @@ export default function UseState(params) {
       text: [false, false, "Explication"],
       configure: [false, false],
       games: [false, false, 0],
-      window: [false, false],
+      window: false
     },
     Google: {
       Instagram: {

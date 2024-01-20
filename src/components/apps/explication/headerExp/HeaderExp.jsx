@@ -16,7 +16,7 @@ export default function HeaderExp(params) {
   }, [Element]);
   const { moveHeader, setMoveAct } = useMove(width);
 
-  console.log(StateGlobal.aplications.games);
+
 
   return (
     <header className="app__explication__header" ref={Element}>

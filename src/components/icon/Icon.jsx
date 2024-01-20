@@ -1,10 +1,11 @@
 "use client";
 import { useContext } from "react";
-import "./icone.css";
+import "./icon.css";
 import Image from "next/image";
 import Context from "../Context/Context";
+import Link from "next/link";
 
-export default function Configure(params) {
+export default function Icon(params) {
   const { StateGlobal, setStateGlobal } = useContext(Context);
   const ChangeAPP = () => {
     setStateGlobal((prev) => ({
@@ -24,7 +25,7 @@ export default function Configure(params) {
           StateGlobal.aplications.configure[1],
         ],
         games: [params.name === "Games", StateGlobal.aplications.games[1]],
-        window: [params.name === "Window", StateGlobal.aplications.window[1]],
+        window: params.name === "Window",
       },
       Google: {
         Instagram: {
@@ -48,18 +49,20 @@ export default function Configure(params) {
 
   return (
     <>
-      <aside className={`app__icone ${params.use} `} onClick={ChangeAPP}>
-        <picture>
-          <Image
-            width={"auto"}
-            height={"auto"}
-            className="app__icone__img"
-            src={params.img}
-            alt={params.alt}
-          />
-        </picture>
-        <p className="app__icone__name">{params.name}</p>
-      </aside>
+      <Link href={`/${params.path}`}>
+        <aside className={`app__icone ${params.use} `} onClick={ChangeAPP}>
+          <picture>
+            <Image
+              width={"auto"}
+              height={"auto"}
+              className="app__icone__img"
+              src={params.img}
+              alt={params.alt}
+            />
+          </picture>
+          <p className="app__icone__name">{params.name}</p>
+        </aside>
+      </Link>
     </>
   );
 }
