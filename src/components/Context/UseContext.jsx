@@ -5,8 +5,8 @@ import Context from "./Context";
 export default function UseState(params) {
   const [StateGlobal, setStateGlobal] = useState({
     app: {
-      x: 100,
-      y: 100,
+      x: 10,
+      y: 10,
       app: "portofolio",
     },
     aplications: {

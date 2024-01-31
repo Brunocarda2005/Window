@@ -1,0 +1,129 @@
+.app__config__background {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.app__config__background__window {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app__config__background__maniqui {
+  width: 70%;
+  height: 40%;
+  border-radius: var(--border-radius-min);
+  background: var(--color-sexto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 4px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.app__config__background__maniqui__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 1.8px;
+  position: relative;
+}
+
+.app__config__background__maniqui__content__window {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color-secundario);
+  border-radius: 1px;
+  position: relative;
+}
+
+.app__config__background__maniqui__barra {
+  width: 100%;
+  height: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-secundario);
+  opacity: 0.5;
+}
+
+.app__config__background__config {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.app__config__background__colors,
+.app__config__background__config__tema {
+  width: 90%;
+  background-color: var(--color-principal-background);
+  border-radius: var(--border-radius-med);
+}
+
+.app__config__background__config__tema {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .app__config__background__config__tema__title {
+    color: var(--color-principal);
+    font-size: .8em;
+  }
+}
+
+.app__config__background__config__tema__change #tema {
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--color-principal);
+  width: 100%;
+  padding: .5rem 1rem;
+  border-radius: var(--border-radius-med);
+  background-color:  #71717c42;
+  outline: 1px solid #ffffff24;
+}
+
+.app__config__background__colors {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app__config__background__colors__title {
+  width: 90%;
+  color: var(--color-principal);
+  font-size: .8em;
+}
+
+.app__config__background__colors__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  place-items: center;
+}
+
+.app__config__background__colors__content__color {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--border-radius-min);
+  position: relative;
+  box-shadow: 0 0 10px #0000001c;
+}
+
+@media (min-width: 700px) {
+  .app__config__background__maniqui {
+    width: 17rem;
+    height: 7rem;
+  }
+  .app__config__background__colors__content {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}

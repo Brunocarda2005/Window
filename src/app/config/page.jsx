@@ -1,7 +1,12 @@
 "use client";
+import "../Window.css";
 import Configuracion from "../../components/apps/config/Configuracion";
-import "../Window.css"
+import ListConfig from "../../components/apps/config/content/listConfig/ListConfig";
 
 export default function ConfigurePage() {
-  return <Configuracion />;
+  return (
+    <Configuracion>
+      <ListConfig />
+    </Configuracion>
+  );
 }

@@ -27,29 +27,13 @@ export default function Icon(params) {
         games: [params.name === "Games", StateGlobal.aplications.games[1]],
         window: params.name === "Window",
       },
-      Google: {
-        Instagram: {
-          Imgs: StateGlobal.Google.Instagram.Img,
-          state: StateGlobal.Google.Instagram.state,
-          interaction: StateGlobal.Google.Instagram.interaction,
-        },
-        linkedin: {
-          img: StateGlobal.Google.linkedin.img,
-          stats: StateGlobal.Google.linkedin.stats,
-        },
-        portofolio: {
-          des: StateGlobal.Google.portofolio.des,
-          level: StateGlobal.Google.portofolio.level,
-          img: StateGlobal.Google.portofolio.img,
-          alt: StateGlobal.Google.portofolio.alt,
-        },
-      },
+      Google: StateGlobal.Google
     }));
   };
 
   return (
     <>
-      <Link href={`/${params.path}`}>
+      <Link href={`/${params.path}`} className="link">
         <aside className={`app__icone ${params.use} `} onClick={ChangeAPP}>
           <picture>
             <Image

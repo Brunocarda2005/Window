@@ -33,3 +33,14 @@
   background-color: #ffffff4d;
   transition: all .1s ease-in-out;
 }
+
+.header_window {
+  gap: 2px;
+}
+.header_window .app__background__window__span {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-principal);
+  border-radius: 0.07rem;
+  box-shadow: none;
+}

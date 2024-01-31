@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Fondo from "../../../static/fotos/fondo_pantalla.png";
+import Fondo from "../../../../../static/fotos/fondo_pantalla.png";
 import { useState } from "react";
 
 export default function HeaderConfig() {

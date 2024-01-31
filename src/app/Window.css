@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 0.3rem; /* Anchura de la barra de desplazamiento */
+}
+/* Estilo del agarre de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: #acacac1d; /* Color del agarre */
+  border-radius: 2px; /* Bordes redondeados */
+}
+
+
 :root {
   /* colors */
 
@@ -10,7 +21,7 @@
   --color-quinto: #121212;
   --color-sexto: #151516;
   --color-background-window: #15151656;
-  --color-principal-background: #d8d8d820;
+  --color-principal-background: #99999920;
   --color-gray: #242426;
 
   /* border */
@@ -122,15 +133,4 @@ button {
 .app__header__icone:hover {
   background-color: rgba(255, 255, 255, 0.109);
   border: 1.7px solid #ffffff18;
-}
-
-.header_window {
-  gap: 2px;
-}
-.header_window .app__background__window__span {
-  width: 10px;
-  height: 10px;
-  background-color: var(--color-principal);
-  border-radius: 0.07rem;
-  box-shadow: none;
 }

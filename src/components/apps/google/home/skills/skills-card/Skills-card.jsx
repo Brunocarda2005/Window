@@ -5,21 +5,14 @@ import Context from "../../../../../Context/Context";
 import Image from "next/image";
 
 export default function SkillsCard(params) {
-  const { setStateGlobal } = useContext(Context);
+  const { StateGlobal, setStateGlobal } = useContext(Context);
 
   const SaveData = () => {
     setStateGlobal((prevData) => ({
       ...prevData,
       Google: {
-        Instagram: {
-          Imgs: [],
-          state: false,
-          interaction: {},
-        },
-        linkedin: {
-          img: "react.svg",
-          stats: "",
-        },
+        Instagram: StateGlobal.Google.Instagram,
+        linkedin: StateGlobal.Google.linkedin,
         portofolio: {
           des: params.des,
           level: params.stats,
