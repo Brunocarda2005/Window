@@ -1,7 +1,85 @@
+.app__header {
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100000;
+  border-top: 1.5px solid #5c77ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.243); /* Sombra */
+}
+
+.app__header__day_nigth {
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  left: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4px;
+  .app__header__day_nigth__img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+.app__header__data {
+  position: absolute;
+  right: 1%;
+  z-index: 3;
+
+  .app__header__data__time {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: var(--color-principal);
+    span {
+      font-size: 0.7em;
+    }
+    p {
+      font-size: 0.7em;
+    }
+  }
+}
+
+.app__header__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background-color: var(--color-secundarioBarra);
+}
+.app__header__background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: repeating-conic-gradient(
+    #1a1a1a11 0.00000045%,
+    #00000012 0.00005%
+  );
+}
+
+.app__header__icone {
+  height: 2.3rem;
+  width: 2.5rem;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.app__header__icone:hover {
+  background-color: rgba(255, 255, 255, 0.109);
+  border: 1.7px solid #ffffff18;
+}
+
 .app_header__content {
   display: flex;
   z-index: 10;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .app_header__content__icone {
@@ -27,16 +105,17 @@
 
 .app_header__content__icone__span#true {
   width: 40%;
-  height: .2rem;
+  height: 0.2rem;
   border-radius: 1rem;
   position: absolute;
   background-color: #ffffff4d;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
-.header_window {
+.app__background__window.header_window {
   gap: 2px;
 }
+
 .header_window .app__background__window__span {
   width: 10px;
   height: 10px;

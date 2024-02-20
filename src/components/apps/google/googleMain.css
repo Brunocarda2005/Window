@@ -1,0 +1,32 @@
+.googleApp {
+  width: 100%;
+  height: 100%;
+  background-color: #444;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.googleApp__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.googleApp__content__title {
+  font-size: 3em;
+  color: #fff;
+  user-select: none;
+}
+
+.googleApp__content__serch {
+  width: 60%;
+  background: #fff;
+  border-radius: 1rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}

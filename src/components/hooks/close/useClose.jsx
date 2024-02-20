@@ -11,51 +11,34 @@ export default function useClose() {
           x: 0,
           y: 0,
           app: nameApp,
+          data: StateGlobal.app.data,
         },
         aplications: {
-          google:
-            nameApp === "portofolio"
-              ? [cl, exp]
-              : StateGlobal.aplications.google,
-          text:
-            nameApp === "text"
-              ? [cl, exp, StateGlobal.aplications.text[2]]
-              : StateGlobal.aplications.text,
+          google: nameApp === "google" ? cl : StateGlobal.aplications.google,
+          text: nameApp === "text" ? cl : StateGlobal.aplications.text,
           configure:
-            nameApp === "config"
-              ? [cl, exp]
-              : StateGlobal.aplications.configure,
-          games:
-            nameApp === "folder"
-              ? [cl, exp, StateGlobal.aplications.games[2]]
-              : StateGlobal.aplications.games,
+            nameApp === "config" ? cl : StateGlobal.aplications.configure,
+          games: nameApp === "folder" ? cl : StateGlobal.aplications.games,
           window: nameApp === "window" ? !cl : StateGlobal.aplications.window,
+          expand: true,
         },
-        Google: StateGlobal.Google
+        Google: StateGlobal.Google,
+        Config: StateGlobal.Config,
       });
     } else {
       setStateGlobal((prev) => ({
         ...prev,
         aplications: {
-          google:
-            nameApp === "portofolio"
-              ? [cl, exp]
-              : StateGlobal.aplications.google,
-          text:
-            nameApp === "text"
-              ? [cl, exp, StateGlobal.aplications.text[2]]
-              : StateGlobal.aplications.text,
+          google: nameApp === "google" ? cl : StateGlobal.aplications.google,
+          text: nameApp === "text" ? cl : StateGlobal.aplications.text,
           configure:
-            nameApp === "config"
-              ? [cl, exp]
-              : StateGlobal.aplications.configure,
-          games:
-            nameApp === "folder"
-              ? [cl, exp, StateGlobal.aplications.games[2]]
-              : StateGlobal.aplications.games,
+            nameApp === "config" ? cl : StateGlobal.aplications.configure,
+          games: nameApp === "folder" ? cl : StateGlobal.aplications.games,
           window: nameApp === "window" ? !cl : StateGlobal.aplications.window,
+          expand: false,
         },
-        Google: StateGlobal.Google
+        Google: StateGlobal.Google,
+        Config: StateGlobal.Config,
       }));
     }
   };

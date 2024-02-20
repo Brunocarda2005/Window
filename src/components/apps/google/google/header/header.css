@@ -3,7 +3,7 @@
   background-color: #252525;
   width: 100%;
   top: 0;
-  height: 4rem;
+  height: 4.5rem;
 }
 
 .google-header-web {
@@ -18,7 +18,7 @@
 .google-header-web-info {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 0.5rem;
   align-items: center;
   padding-left: 0.5rem;
@@ -63,7 +63,7 @@
   width: 40%;
   height: 100%;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .google-header-web-info-content-background {
@@ -167,6 +167,7 @@
 
 .google-header-web-info-content-img {
   width: 1rem;
+  filter: grayscale(120%);
 }
 
 .google-header-web-info-content-text {
@@ -188,14 +189,14 @@
   width: 7rem;
   height: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .google-header-web-close-content {
   width: 10rem;
   height: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -264,12 +265,13 @@
 
 .google-header-serch {
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   position: absolute;
   bottom: 0;
   background-color: #3b3b3b;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   align-items: center;
   border-top-left-radius: 0.4rem;
@@ -301,33 +303,36 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
+  position: relative;
+}
+
+.google-header-serch-input__content {
+  width: 100%;
+  position: absolute;
+  top: .3rem;
+  z-index: 99;
 }
 
 .google-header-serch-input-content {
-  width: 90%;
-  height: 80%;
+  width: 100%;
   background-color: #252525;
-  border-radius: 100rem;
-  padding: 0 0.3rem;
+  border-radius: 1rem;
+  padding: .3rem 0.3rem;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.3rem;
+  position: relative;
+  z-index: 99;
+  overflow: hidden;
 }
 
 .google-header-serch-input-content-img {
   width: 1rem;
 }
 
-.google-header-serch-input-content-input {
-  height: 60%;
-  width: 90%;
-  background: #252525;
-  border: none;
-  outline: none;
-}
 
 .google-header-serch-profile {
   min-width: 3.5rem;

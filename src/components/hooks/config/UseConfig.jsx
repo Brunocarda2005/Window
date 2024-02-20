@@ -1,8 +1,23 @@
 "use client";
-import { useState } from "react";
+import Context from "../../Context/Context";
+import { useContext } from "react";
 
 export default function UseConfig() {
-  const [styleConfig, setStyleConfig] = useState({});
+  const { StateGlobal, setStateGlobal } = useContext(Context);
 
-  return { styleConfig, setStyleConfig };
+  const ConfigChange = (colorConfig, barraConfig, dayConfig) => {
+    setStateGlobal((prevData) => ({
+      ...prevData,
+      Config: {
+        colorSecundarioW:
+          colorConfig != "" ? colorConfig : StateGlobal.Config.colorSecundarioW,
+        colorBarra:
+          barraConfig != "" ? barraConfig : StateGlobal.Config.colorBarra,
+        colorChangeDayNight:
+          dayConfig != "" ? dayConfig : StateGlobal.Config.colorChangeDayNight,
+      },
+    }));
+  };
+
+  return { ConfigChange };
 }

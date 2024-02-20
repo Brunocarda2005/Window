@@ -20,9 +20,9 @@ export default function Aplications() {
           <Icon
             img={imgGoogle}
             alt={"portofolio winows"}
-            name={"Portofolio"}
+            name={"google"}
             use={"window"}
-            path={""}
+            path={"google"}
           />
           <Icon
             img={imgFolder}

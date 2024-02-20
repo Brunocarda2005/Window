@@ -51,6 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 
   .app__folder__content__elemts__content {
     width: 90%;

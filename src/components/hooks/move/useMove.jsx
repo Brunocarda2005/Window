@@ -20,9 +20,11 @@ export default function useMove(width) {
             x: e.clientX - Elwidth,
             y: e.clientY - 20,
             app: StateGlobal.app.app,
+            data: StateGlobal.app.data
           },
           aplications: StateGlobal.aplications,
-          Google: StateGlobal.Google
+          Google: StateGlobal.Google,
+          Config: StateGlobal.Config
         });
       }
     }

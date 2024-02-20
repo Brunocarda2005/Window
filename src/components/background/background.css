@@ -18,6 +18,5 @@
   width: 2rem;
   height: 2rem;
   border-radius: var(--border-radius-min);
-  background-color: var(--color-secundario);
-  box-shadow: 0 0 10px #000000a0;
+  background-color: var(--color-secundarioW);
 }

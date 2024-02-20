@@ -1,31 +1,21 @@
 "use client";
-import Actions from "@/app/pags/google/header/actionsTop/Actions";
-import { useState, useRef, useEffect } from "react";
-import useMove from "@/components/hooks/move/useMove";
+import HeaderApps from "../../../headerApps/HeaderApps";
 
 export default function HeaderConfig(params) {
-  const Element = useRef(null);
-  const [width, setWidth] = useState(null);
-  useEffect(() => {
-    setWidth(Element.current.parentNode.offsetWidth);
-  }, [Element]);
-  const { moveHeader, setMoveAct } = useMove(width);
 
   return (
-    <header className="app__config__content__header" ref={Element}>
-      <section className="app__config__content__header__menu">
-        <aside
-          className="app__config__content__header__menu__burger"
-          onMouseDown={() => setMoveAct(true)}
-          onMouseUp={() => setMoveAct(false)}
-          onMouseMove={moveHeader}
-        >
-          <div className="app__config__content__header__menu__burger__content">
-            <span></span>
-          </div>
-        </aside>
-        <Actions data={params.data} name={"config"} />
-      </section>
+    <section>      
+      <HeaderApps
+        classNameHeader={"app__config__content__header"}
+        classNameNav={"app__config__content__header__menu"}
+        classNameSection={"app__config__content__header__menu__burger"}
+        data={params.data}
+        name={"config"}
+      >
+        <div className="app__config__content__header__menu__burger__content">
+          <span></span>
+        </div>
+      </HeaderApps>
       <aside className="app__config__content__header__menu__content">
         <header className="app__config__content__header__menu__content__header"></header>
         <nav
@@ -40,6 +30,6 @@ export default function HeaderConfig(params) {
           </ul>
         </nav>
       </aside>
-    </header>
+    </section>
   );
 }

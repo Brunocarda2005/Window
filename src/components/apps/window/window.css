@@ -57,6 +57,10 @@
    align-items: center;
 }
 
+.app__window__content__header__off-content__btn {
+  cursor: pointer;
+}
+
 #window_true {
   position: absolute;
   left: 50%;

@@ -1,7 +1,7 @@
 "use client";
 import "./Skills-card.css";
 import { useContext } from "react";
-import Context from "../../../../../Context/Context";
+import Context from "../../../../../../Context/Context";
 import Image from "next/image";
 
 export default function SkillsCard(params) {
@@ -20,6 +20,7 @@ export default function SkillsCard(params) {
           alt: params.alt,
         },
       },
+      Config: StateGlobal.Config
     }));
   };
 

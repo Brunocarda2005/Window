@@ -1,21 +1,22 @@
+"use client";
 import UseConfig from "../../../../hooks/config/UseConfig";
 import "./BackgroundConfig.css";
 
 export default function BackgroundConfig() {
-  const { setStyleConfig } = UseConfig();
+  const { ConfigChange } = UseConfig();
 
   const Colors = [
-    "#000",
-    "#432",
-    "#999",
-    "#192",
-    "#109",
-    "#432",
-    "#999",
-    "#192",
-    "#109",
-    "#432",
-    "#999",
+    ["#000", "#100"],
+    ["#232", "#200"],
+    ["#399", "#300"],
+    ["#492", "#400"],
+    ["#509", "#500"],
+    ["#632", "#600"],
+    ["#799", "#700"],
+    ["#892", "#800"],
+    ["#909", "#900"],
+    ["#2132", "#00a"],
+    ["#9199", "#10f"],
   ];
 
   return (
@@ -36,8 +37,20 @@ export default function BackgroundConfig() {
           <h5 className="app__config__background__config__tema__title">Tema</h5>
           <div className="app__config__background__config__tema__change">
             <select name="tema" id="tema">
-              <option value="oscuro" className="d">Oscuro</option>
-              <option value="claro" className="d">Claro</option>
+              <option
+                value="oscuro"
+                className="d"
+                onClick={() => ConfigChange("", "", "oscuro")}
+              >
+                Oscuro
+              </option>
+              <option
+                value="claro"
+                className="d"
+                onClick={() => ConfigChange("", "", "claro")}
+              >
+                Claro
+              </option>
             </select>
           </div>
         </aside>
@@ -48,7 +61,8 @@ export default function BackgroundConfig() {
               <span
                 key={data}
                 className="app__config__background__colors__content__color"
-                style={{ background: data }}
+                style={{ background: data[0] }}
+                onClick={() => ConfigChange(data[0], data[1])}
               ></span>
             ))}
           </div>

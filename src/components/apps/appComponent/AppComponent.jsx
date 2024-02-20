@@ -8,7 +8,6 @@ export default function AppComponent(params) {
   const { Select } = useSelect(); // hook para seleccionar app
 
   const selectApp = () => Select(params.name); // seleccionar una app, en este caso carpetas de juegos
-  console.log(params.name);
   let style = {
     top: `${StateGlobal.app.y}px`,
     left: `${StateGlobal.app.x}px`,
@@ -17,9 +16,9 @@ export default function AppComponent(params) {
   return (
     <main
       className={`app__${params.name}
-                  app_exp-${params.data[1]} 
-                  app_${params.data[0]}`}
-      id={`app_${params.data[0]}`}
+                  app_exp-${StateGlobal.aplications.expand} 
+                  app_${params.data}`}
+      id={`app_${params.data}`}
       onFocus={selectApp}
       style={style}
     >

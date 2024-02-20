@@ -1,11 +1,11 @@
 "use client";
 import "./google.css";
-import "./../../../../components/static/css/animations.css"
-import {  useContext } from "react";
+import "../../../../static/css/animations.css";
+import { useContext } from "react";
 import ContentGoogle from "../content/ContentGoogle";
 import HeaderGoogle from "../header/Header";
-import Context from "../../../../components/Context/Context";
-import AppComponent from "@/components/apps/appComponent/AppComponent";
+import Context from "../../../../Context/Context";
+import AppComponent from "../../../appComponent/AppComponent";
 
 export default function Google(params) {
   const { StateGlobal } = useContext(Context);

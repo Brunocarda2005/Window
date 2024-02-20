@@ -7,14 +7,19 @@ export default function UseState(params) {
     app: {
       x: 10,
       y: 10,
-      app: "portofolio",
+      app: "off",
+      data: {
+        name: "",
+        password: "",
+      },
     },
     aplications: {
-      google: [true, false],
-      text: [false, false, "Explication"],
-      configure: [false, false],
-      games: [false, false, 0],
-      window: false
+      google: false,
+      text: false,
+      configure: false,
+      games: false,
+      window: false,
+      expand: false,
     },
     Google: {
       Instagram: {
@@ -32,6 +37,10 @@ export default function UseState(params) {
         img: "/_next/static/media/react.34ec7d27.svg",
         alt: "react bruno cardamone vite github",
       },
+    },
+    Config: {
+      colorSecundarioW: "#5c77ff",
+      colorBarra: "#5c77ff90",
     },
   });
 

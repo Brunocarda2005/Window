@@ -11,23 +11,15 @@ export default function Icon(params) {
     setStateGlobal((prev) => ({
       ...prev,
       aplications: {
-        google: [
-          params.name === "Portofolio",
-          StateGlobal.aplications.google[1],
-        ],
-        text: [
-          params.name === "Explication",
-          StateGlobal.aplications.text[1],
-          StateGlobal.aplications.text[2],
-        ],
-        configure: [
-          params.name === "Configuracion",
-          StateGlobal.aplications.configure[1],
-        ],
-        games: [params.name === "Games", StateGlobal.aplications.games[1]],
+        google: params.name === "google",
+        text: params.name === "Explication",
+        configure: params.name === "Configuracion",
+        games: params.name === "Games",
         window: params.name === "Window",
+        expand: false,
       },
-      Google: StateGlobal.Google
+      Google: StateGlobal.Google,
+      Config: StateGlobal.Config,
     }));
   };
 

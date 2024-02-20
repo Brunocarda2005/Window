@@ -4,7 +4,7 @@ import UX_UI from "./skills-ux-ui/UX_UI";
 import Backend from "./skills-backend/Backend";
 import "./Skills.css";
 import { useContext } from "react";
-import Context from "../../../../Context/Context";
+import Context from "../../../../../Context/Context";
 import Image from "next/image";
 
 export default function Skills() {

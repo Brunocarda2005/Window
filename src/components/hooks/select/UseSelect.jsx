@@ -11,9 +11,11 @@ export default function useSelect() {
         x: StateGlobal.app.x,
         y: StateGlobal.app.y,
         app: name,
+        data: StateGlobal.app.data
       },
       aplications: StateGlobal.aplications,
-      Google: StateGlobal.Google
+      Google: StateGlobal.Google,
+      Config: StateGlobal.Config
     });
   };
 

@@ -20,7 +20,7 @@ export default function Folder() {
 
   return (
     <AppComponent name={"folder"} data={StateGlobal.aplications.games}>
-      <HeaderFolder icone={icone}/>
+      <HeaderFolder icone={icone} data={StateGlobal.aplications.games}/>
       <ContentFolder Icone={setIcone} />
     </AppComponent>
   );

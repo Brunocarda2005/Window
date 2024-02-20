@@ -12,8 +12,21 @@ import imgOff from "../../static/svg/off-on-power-svgrepo-com.svg";
 import Image from "next/image";
 
 export default function Window() {
-  const { StateGlobal } = useContext(Context);
+  const { StateGlobal, setStateGlobal } = useContext(Context);
 
+  const offPage = () => {
+    setStateGlobal({
+      app: {
+        x: StateGlobal.app.x,
+        y: StateGlobal.app.y,
+        app: "off",
+        data: StateGlobal.app.data
+      },
+      aplications: StateGlobal.aplications,
+      Google: StateGlobal.Google,
+      Config: StateGlobal.Config
+    })
+  }
   return (
     <main
       className="app__window"
@@ -33,9 +46,9 @@ export default function Window() {
             <Icon
               img={imgGoogle}
               alt={"portofolio winows"}
-              name={"Portofolio"}
+              name={"google"}
               use={"window"}
-              path={""}
+              path={"google"}
             />
             <Icon
               img={imgFolder}
@@ -64,12 +77,12 @@ export default function Window() {
             />
             <div className="app__window__content__header__profile__name">
               <p className="app__window__content__header__profile__name__p">
-                Nazareno Cardamone
+                {StateGlobal.app.data.name}
               </p>
             </div>
           </section>
           <section className="app__window__content__header__off-content">
-            <Image src={imgOff} alt="" width={16} height={16}/>
+            <Image className="app__window__content__header__off-content__btn" src={imgOff} alt="" width={16} height={16} onClick={offPage}/>
           </section>
         </header>
       </section>

@@ -1,10 +1,10 @@
-import Main from "../components/apps/google/home/portafolio/Main"
-import "./Window.css"
+import UserHome from "../components/apps/userHome/UserHome";
+import "./Window.css";
 
-export default function Portofolio() {
+export default function Page() {
   return (
     <>
-      <Main></Main>
+      <UserHome />
     </>
   );
 }

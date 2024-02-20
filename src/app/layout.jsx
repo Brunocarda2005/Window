@@ -1,4 +1,5 @@
-import MainNav from "../components/main/Main"
+import UseState from "@/components/Context/UseContext";
+import MainNav from "../components/main/Main";
 
 export const metadata = {
   title: "Next.js",
@@ -9,9 +10,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <MainNav>
-          {children}
-        </MainNav>
+        <UseState>
+          <MainNav>{children}</MainNav>
+        </UseState>
       </body>
     </html>
   );

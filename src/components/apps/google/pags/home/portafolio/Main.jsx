@@ -6,7 +6,7 @@ import ProyectsAndWorks from "../ProyectAndWorks/ProyectsAndWorks";
 import Footer from "../footer/Footer";
 import Skills from "../skills/Skills";
 import Contact from "../contact/Contact"
-import Google from "../../../../../app/pags/google/google/Google";
+import Google from "../../../google/google/Google";
 
 export default function Main() {
   return (

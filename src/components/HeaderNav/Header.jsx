@@ -8,14 +8,50 @@ import imgConfig from "../static/svg/config.svg";
 import imgText from "../static/svg/document.svg";
 import imgGoogle from "../static/svg/google.svg";
 import useClose from "../hooks/close/useClose";
+import Clock from "../apps/clock/Clock";
+import Image from "next/image";
+import imgDay from "./day.svg";
+import imgNight from "./moon.svg";
 
 export default function Nav() {
   const { StateGlobal } = useContext(Context);
   const { Close } = useClose();
+  const { formattedDate, formattedTime } = Clock();
+  let dataTime = formattedDate.split(",")[1].split("de");
+  let imgTime =
+    formattedTime.split(":")[0] > 20 || formattedTime.split(":")[0] < 4
+      ? imgNight
+      : imgDay;
+
+  const Month = [
+    " enero ",
+    " febrero ",
+    " marzo ",
+    " abril ",
+    " mayo ",
+    " junio ",
+    " julio ",
+    " agosto ",
+    " septiembre ",
+    " octubre ",
+    " noviembre  ",
+    " diciembre ",
+  ];
 
   return (
     <section className="app__header">
       <span className="app__header__background"></span>
+      <span className="app__header__day_nigth">
+        <picture>
+          <Image
+            className="app__header__day_nigth__img"
+            src={imgTime}
+            alt=""
+            width={"auto"}
+            height={"auto"}
+          />
+        </picture>
+      </span>
       <div className="app_header__content">
         <aside
           className="app__header__icone"
@@ -86,15 +122,23 @@ export default function Nav() {
           <Icon
             img={imgGoogle}
             alt={"portofolio winows"}
-            name={"Portofolio"}
+            name={"google"}
             use={"header"}
-            path={""}
+            path={"google"}
           />
           <span
             className="app_header__content__icone__span"
             id={`${StateGlobal.aplications.google[0]}`}
           ></span>
         </div>
+      </div>
+      <div className="app__header__data">
+        <section className="app__header__data__time">
+          <span>{formattedTime}</span>
+          <p>
+            {dataTime[0]}/{Month.indexOf(dataTime[1]) + 1}/{dataTime[2]}
+          </p>
+        </section>
       </div>
     </section>
   );

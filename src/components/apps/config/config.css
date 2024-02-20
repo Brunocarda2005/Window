@@ -18,7 +18,7 @@
 
 .app__config__content__header {
   width: 100%;
-  height: 2rem;
+  height: 3rem;
   display: flex;
   justify-content: space-between;
 }
@@ -115,7 +115,7 @@
   opacity: 0.5;
 }
 .app__config__content__content__cards-content__header__text__change {
-  color: var(--color-secundario);
+  color: var(--color-secundarioW);
   opacity: 0.8;
 }
 
