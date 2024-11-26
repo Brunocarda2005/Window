@@ -3,7 +3,7 @@ import UseConfig from "../../../../hooks/config/UseConfig";
 import "./BackgroundConfig.css";
 
 export default function BackgroundConfig() {
-  const { StateGlobal, ConfigChange } = UseConfig();
+  const { ConfigChange } = UseConfig();
 
   const Colors = [
     ["#000", "#100"],

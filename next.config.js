@@ -1,9 +1,7 @@
-const isGithubPages = process.env.GITHUB_ACTIONS || false;
 
 const nextConfig = {
-  assetPrefix: isGithubPages ? "/Window" : "",
   images: {
-    unoptimized: true,
+    unoptimized: true,  // Mantén esta opción si no quieres optimizar las imágenes
   },
 };
 
