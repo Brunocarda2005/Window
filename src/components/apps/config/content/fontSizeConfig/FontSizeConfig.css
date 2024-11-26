@@ -1,0 +1,144 @@
+.app__config__font {
+  width: 100%;
+  height: 100%;
+}
+
+.app__config__font__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app__config__font__content__header {
+  width: 10rem;
+  height: 3rem;
+  margin-top: 2rem;
+  border-radius: 0.3rem;
+  background-color: var(--color-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__config__font__content__header__text {
+  font-size: var(--Font-size);
+  color: var(--color-principal);
+  text-shadow: var(--Font-shadow);
+  font-weight: var(--Font-weight);
+}
+
+.app__config__font__content__config {
+  width: 95%;
+  height: 70%;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.app__config__font__content__config__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: var(--color-gray);
+  border-radius: 0.3rem;
+  p {
+    font-size: 1em;
+    color: var(--color-principal);
+    font-weight: 700;
+  }
+  input {
+    width: 90%;
+    margin-left: 0.5rem;
+  }
+}
+
+#Contrast {
+  grid-column: span 2;
+  grid-row: 2;
+}
+
+.input_range {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Slider width */
+  height: 5px; /* Track height */
+  border-radius: 1rem;
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Partial transparency */
+  transition: opacity 0.2s; /* Transition for hover effect */
+}
+
+.size {
+  background: linear-gradient(
+    to right,
+    #ff0000 0%,
+    #ff0000 var(--valueS, 0%),
+    #9f9f9f var(--valueS, 0%),
+    #9f9f9f 100%
+  ); /* Color del progreso */
+}
+
+.weight {
+  background: linear-gradient(
+    to right,
+    #ff0000 0%,
+    #ff0000 var(--valueW, 0%),
+    #9f9f9f var(--valueW, 0%),
+    #9f9f9f 100%
+  ); /* Color del progreso */
+}
+
+.contrast {
+  background: linear-gradient(
+    to right,
+    #ff0000 0%,
+    #ff0000 var(--valueC, 0%),
+    #9f9f9f var(--valueC, 0%),
+    #9f9f9f 100%
+  ); /* Color del progreso */
+}
+
+.input_range:hover {
+  opacity: 1; /* Fully opaque on hover */
+}
+
+.input_range::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 0.7rem; /* Thumb width */
+  height: 0.7rem; /* Thumb height */
+  background: #4bc3f2; /* Thumb color (Windows accent color) */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%; /* Rounded corners */
+  box-shadow: 0 0 0px 5px #515155;
+}
+
+.input_range::-moz-range-thumb {
+  width: 0.7rem; /* Thumb width */
+  height: 0.7rem; /* Thumb height */
+  background: #4bc3f2; /* Thumb color */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%; /* Rounded corners */
+}
+
+/* IE-specific styles */
+.input_range::-ms-thumb {
+  width: 0.7rem; /* Thumb width */
+  height: 0.7rem; /* Thumb height */
+  background: #4bc3f2; /* Thumb color */
+  border-radius: 50%; /* Rounded corners */
+}
+
+.input_range::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  width: 100%;
+  height: 5px;
+}

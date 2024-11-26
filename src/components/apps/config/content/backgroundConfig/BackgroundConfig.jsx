@@ -3,7 +3,7 @@ import UseConfig from "../../../../hooks/config/UseConfig";
 import "./BackgroundConfig.css";
 
 export default function BackgroundConfig() {
-  const { ConfigChange } = UseConfig();
+  const { StateGlobal, ConfigChange } = UseConfig();
 
   const Colors = [
     ["#000", "#100"],
@@ -62,7 +62,7 @@ export default function BackgroundConfig() {
                 key={data}
                 className="app__config__background__colors__content__color"
                 style={{ background: data[0] }}
-                onClick={() => ConfigChange(data[0], data[1])}
+                onClick={() => ConfigChange(data[0], data[1], "oscuro")}
               ></span>
             ))}
           </div>

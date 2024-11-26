@@ -41,6 +41,11 @@ export default function UseState(params) {
     Config: {
       colorSecundarioW: "#5c77ff",
       colorBarra: "#5c77ff90",
+      Font: {
+        size: 0,
+        weight: 0,
+        shadow: 0,
+      },
     },
   });
 

@@ -1,6 +1,6 @@
 "use client";
 import "./Header.css";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Context from "../Context/Context";
 import Icon from "../icon/Icon";
 import imgFolder from "../static/svg/folder.svg";
@@ -14,6 +14,7 @@ import imgDay from "./day.svg";
 import imgNight from "./moon.svg";
 
 export default function Nav() {
+  const [isMobile, setDeviceInfo] = useState(window.innerWidth >= 600);
   const { StateGlobal } = useContext(Context);
   const { Close } = useClose();
   const { formattedDate, formattedTime } = Clock();
@@ -37,6 +38,19 @@ export default function Nav() {
     " noviembre  ",
     " diciembre ",
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDeviceInfo(window.innerWidth >= 600);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup y ejecución inicial
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <section className="app__header">
@@ -134,9 +148,13 @@ export default function Nav() {
       </div>
       <div className="app__header__data">
         <section className="app__header__data__time">
-          <span>{formattedTime}</span>
+          <span>{isMobile ? formattedTime : null}</span>
           <p>
-            {dataTime[0]}/{Month.indexOf(dataTime[1]) + 1}/{dataTime[2]}
+            {isMobile
+              ? `${dataTime[0]} / ${Month.indexOf(dataTime[1]) + 1} / ${
+                  dataTime[2]
+                }`
+              : null}
           </p>
         </section>
       </div>

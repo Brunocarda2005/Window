@@ -100,13 +100,13 @@ export default function HomePage() {
           <input
             className={`input input_${StateGlobal.app.data.name != ""}`}
             type="text"
-            placeholder="Name"
+            placeholder="Name (más de 4 caracteres)"
             onChange={NameSave}
           />
           <input
             className="input"
             type="password"
-            placeholder="Password"
+            placeholder="Password (más de 4 caracteres)"
             onChange={PasswordSave}
             ref={PasswordElemnt}
           />

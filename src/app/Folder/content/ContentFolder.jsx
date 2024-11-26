@@ -9,11 +9,11 @@ import Image from "next/image";
 
 export default function ContentFolder(params) {
   const elemntsFOLD = [
-    {
-      img: imgSnake,
-      name: "Snake",
-      path: "snake",
-    },
+    // {
+    //   img: imgSnake,
+    //   name: "Snake",
+    //   path: "snake",
+    // },
     {
       img: imgTetris,
       name: "Tetris",

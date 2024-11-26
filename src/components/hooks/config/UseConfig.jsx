@@ -9,6 +9,11 @@ export default function UseConfig() {
     setStateGlobal((prevData) => ({
       ...prevData,
       Config: {
+        Font: {
+          size: StateGlobal.Config.Font.size,
+          weight: StateGlobal.Config.Font.weight,
+          shadow: StateGlobal.Config.Font.shadow,
+        },
         colorSecundarioW:
           colorConfig != "" ? colorConfig : StateGlobal.Config.colorSecundarioW,
         colorBarra:
@@ -19,5 +24,5 @@ export default function UseConfig() {
     }));
   };
 
-  return { ConfigChange };
+  return { StateGlobal, ConfigChange };
 }

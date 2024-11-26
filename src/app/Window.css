@@ -10,7 +10,6 @@
   border-radius: 2px; /* Bordes redondeados */
 }
 
-
 :root {
   /* colors */
 
@@ -40,6 +39,7 @@
   --font-size-med: 1.3em;
   --font-size-med_min: 0.8em;
   --font-size-min: 0.7em;
+  --Font-size: 0.5em;
 }
 
 * {

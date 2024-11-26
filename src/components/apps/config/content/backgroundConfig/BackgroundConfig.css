@@ -64,7 +64,7 @@
 .app__config__background__colors,
 .app__config__background__config__tema {
   width: 90%;
-  background-color: var(--color-principal-background);
+  background-color: var(--color-gray);
   border-radius: var(--border-radius-med);
 }
 

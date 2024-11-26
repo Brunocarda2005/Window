@@ -1,4 +1,3 @@
-import { floor, random } from "mathjs";
 import { useEffect, useRef, useState } from "react";
 import "./Tetris.css";
 
