@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import icone from "../../../static/svg/document.svg";
+import icone from "../../../../../public/svg/document.svg";
 import HeaderApps from "@/components/headerApps/HeaderApps";
 
 export default function HeaderExp(params) {

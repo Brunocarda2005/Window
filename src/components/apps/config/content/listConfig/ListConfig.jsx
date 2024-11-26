@@ -1,9 +1,8 @@
 import HeaderConfigContent from "./headerContent/HeaderConfigContent";
 import CardConfig from "./card/CardConfig";
-import IconBackground from "../../../../static/svg/screen-svgrepo-com.svg";
-import IconFont from "../../../../static/svg/font-svgrepo-com.svg";
-import IconIcon from "../../../../static/svg/window-multiple-svgrepo-com.svg";
-
+import IconBackground from "../../../../../../public/svg/screen-svgrepo-com.svg";
+import IconFont from "../../../../../../public/svg/font-svgrepo-com.svg";
+import IconIcon from "../../../../../../public/svg/window-multiple-svgrepo-com.svg";
 
 export default function ListConfig() {
   return (

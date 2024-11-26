@@ -1,5 +1,5 @@
 import "./contact.css";
-import imgFooter from "../../static/svg/wave.svg";
+import imgFooter from "../../../../../../../public/svg/wave.svg";
 import CardContact from "./card/CardContact";
 import HeaderContact from "./header/Header";
 import Image from "next/image";

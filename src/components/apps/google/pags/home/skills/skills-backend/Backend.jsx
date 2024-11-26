@@ -1,6 +1,6 @@
 import SkillsCard from "../skills-card/Skills-card";
-import Node from "../../../static/svg/nodejs.svg";
-import MYsql from "../../../static/svg/mysql.svg";
+import Node from "../../../../../../../../public/svg/nodejs.svg";
+import MYsql from "../../../../../../../../public/svg/mysql.svg";
 
 export default function Backend() {
   const Card = {

@@ -2,10 +2,10 @@
 import "./Tetris.css";
 import { floor, random } from "mathjs";
 import { useEffect, useRef, useState } from "react";
-import playIMG from "../../components/static/svg/play.svg";
+import playIMG from "../../../public/svg/play.svg";
 import Image from "next/image";
-import restartIMG from "../../components/static/svg/restart.svg";
-import closeIMG from "../../components/static/svg/close.svg";
+import restartIMG from "../../../public/svg/restart.svg";
+import closeIMG from "../../../public/svg/close.svg";
 import Link from "next/link";
 
 export default function Tetris() {
@@ -217,7 +217,8 @@ export default function Tetris() {
     });
 
     if (rowsToRemove > 0) {
-      setScore((prevScore) => prevScore + rowsToRemove * 100);
+      setScore((prevScore) => prevScore + rowsToRemove);
+      dropInterval -= 80;
     }
   };
 

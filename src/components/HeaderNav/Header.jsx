@@ -3,27 +3,30 @@ import "./Header.css";
 import { useContext, useEffect, useState } from "react";
 import Context from "../Context/Context";
 import Icon from "../icon/Icon";
-import imgFolder from "../static/svg/folder.svg";
-import imgConfig from "../static/svg/config.svg";
-import imgText from "../static/svg/document.svg";
-import imgGoogle from "../static/svg/google.svg";
+import imgFolder from "../../../public/svg/folder.svg";
+import imgConfig from "../../../public/svg/config.svg";
+import imgText from "../../../public/svg/document.svg";
+import imgGoogle from "../../../public/svg/google.svg";
 import useClose from "../hooks/close/useClose";
 import Clock from "../apps/clock/Clock";
 import Image from "next/image";
-import imgDay from "./day.svg";
-import imgNight from "./moon.svg";
+import imgDay from "../../../public/svg/day.svg";
+import imgNight from "../../../public/svg/moon.svg";
 
 export default function Nav() {
-  const [isMobile, setDeviceInfo] = useState(window.innerWidth >= 600);
+  const [isMobile, setIsMobile] = useState(false);
   const { StateGlobal } = useContext(Context);
   const { Close } = useClose();
   const { formattedDate, formattedTime } = Clock();
-  let dataTime = formattedDate.split(",")[1].split("de");
-  let imgTime =
-    formattedTime.split(":")[0] > 20 || formattedTime.split(":")[0] < 4
-      ? imgNight
-      : imgDay;
 
+  // Extraer fecha y hora
+  let dataTime = formattedDate.split(",")[1].split("de");
+  const hour = parseInt(formattedTime.split(":")[0], 10);
+
+  // Determinar imagen dependiendo de la hora
+  let imgTime = hour > 20 || hour < 4 ? imgNight : imgDay;
+
+  // Meses del año
   const Month = [
     " enero ",
     " febrero ",
@@ -35,20 +38,23 @@ export default function Nav() {
     " agosto ",
     " septiembre ",
     " octubre ",
-    " noviembre  ",
+    " noviembre ",
     " diciembre ",
   ];
 
+  // Detectar el tamaño de la pantalla
   useEffect(() => {
-    const handleResize = () => {
-      setDeviceInfo(window.innerWidth >= 600);
+    const updateDeviceInfo = () => {
+      setIsMobile(window.innerWidth < 600);
     };
 
-    window.addEventListener("resize", handleResize);
+    // Inicializar y agregar el listener de resize
+    updateDeviceInfo();
+    window.addEventListener("resize", updateDeviceInfo);
 
-    // Cleanup y ejecución inicial
+    // Limpiar el listener al desmontar
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", updateDeviceInfo);
     };
   }, []);
 

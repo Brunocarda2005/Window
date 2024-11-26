@@ -1,9 +1,9 @@
 import Card from "./card/Card";
-import js from "../../static/svg/js.svg";
-import buscador from "../../static/fotos/buscador.png";
-import calculator from "../../static/fotos/calculator.png";
-import game from "../../static/fotos/game.png";
-import stats from "../../static/fotos/stats.png";
+import js from "../../../../../../../public/svg/js.svg";
+import buscador from "../../../../../../../public/fotos/buscador.png";
+import calculator from "../../../../../../../public/fotos/calculator.png";
+import game from "../../../../../../../public/fotos/game.png";
+import stats from "../../../../../../../public/fotos/stats.png";
 import "./ProyectsAndWorks.css";
 
 export default function ProyectsAndWorks() {

@@ -2,8 +2,8 @@
 import "./userHome.css";
 import { useContext, useState, useRef } from "react";
 import Image from "next/image";
-import imgBackground from "./Jjjjjj.jpg";
-import imgProfile from "../../static/svg/Group 10.svg";
+import imgBackground from "../../../../public/fotos/Jjjjjj.jpg";
+import imgProfile from "../../../../public/svg/Group 10.svg";
 import Context from "@/components/Context/Context";
 import Clock from "../clock/Clock";
 

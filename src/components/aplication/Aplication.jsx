@@ -1,9 +1,9 @@
 import "./aplication.css";
 import Icon from "../icon/Icon";
-import imgFolder from "../static/svg/folder.svg";
-import imgConfig from "../static/svg/config.svg";
-import imgText from "../static/svg/document.svg";
-import imgGoogle from "../static/svg/google.svg";
+import imgFolder from "../../../public/svg/folder.svg";
+import imgConfig from "../../../public/svg/config.svg";
+import imgText from "../../../public/svg/document.svg";
+import imgGoogle from "../../../public/svg/google.svg";
 
 export default function Aplications() {
   return (

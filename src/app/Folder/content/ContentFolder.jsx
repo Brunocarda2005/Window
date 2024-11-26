@@ -1,9 +1,9 @@
 import "./ContentFolder.css";
-import imgFolder from "../../../components/static/svg/folder.svg";
-import imgText from "../../../components/static/svg/document.svg";
-import imgPC from "../../../components/static/svg/pc3.svg";
-import imgSnake from "../../../components/static/svg/snake-svgrepo-com.svg";
-import imgTetris from "../../../components/static/svg/Tetris.svg";
+import imgFolder from "../../../../public/svg/folder.svg";
+import imgText from "../../../../public/svg/document.svg";
+import imgPC from "../../../../public/svg/pc3.svg";
+import imgSnake from "../../../../public/svg/snake-svgrepo-com.svg";
+import imgTetris from "../../../../public/svg/Tetris.svg";
 import Icone from "./icone/Icone";
 import Image from "next/image";
 

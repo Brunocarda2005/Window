@@ -1,6 +1,6 @@
-import imgLogo from "../../../static/fotos/fondoLinkedin.jpg";
-import imgPhone from "../../../static/svg/phonesvg.svg";
-import imgMail from "../../../static/svg/Mailsvg.svg";
+import imgLogo from "../../../../../../../../public/fotos/fondoLinkedin.jpg";
+import imgPhone from "../../../../../../../../public/svg/phonesvg.svg";
+import imgMail from "../../../../../../../../public/svg/Mailsvg.svg";
 import Image from "next/image";
 
 export default function HeaderContact() {

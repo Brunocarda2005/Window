@@ -1,10 +1,10 @@
-import Css from "../../../static/svg/css.svg";
-import Javascript from "../../../static/svg/js.svg";
-import React from "../../../static/svg/react.svg";
-import Html from "../../../static/svg/html.svg";
-import NextJs from "../../../static/svg/next-js.svg";
-import Tailwind from "../../../static/svg/tailwindcss.svg";
-import TypeScript from "../../../static/svg/typescript.svg"
+import Css from "../../../../../../../../public/svg/css.svg";
+import Javascript from "../../../../../../../../public/svg/js.svg";
+import React from "../../../../../../../../public/svg/react.svg";
+import Html from "../../../../../../../../public/svg/html.svg";
+import NextJs from "../../../../../../../../public/svg/next-js.svg";
+import Tailwind from "../../../../../../../../public/svg/tailwindcss.svg";
+import TypeScript from "../../../../../../../../public/svg/typescript.svg";
 import SkillsCard from "../skills-card/Skills-card";
 
 export default function Frontend() {
@@ -17,7 +17,7 @@ export default function Frontend() {
         des: "Esta fue una de las primeras herramientas que aprendí, tengo 2 años que llevo aprendiendo este lenguaje, es mi lenguaje favorito sin duda",
         alt: "javascript bruno cardamone vite github",
       },
-        {
+      {
         img: TypeScript,
         key: 2,
         stats: "junior",

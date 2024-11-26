@@ -1,7 +1,7 @@
-import Home from "../../../static/svg/home2.svg";
-import Skills from "../../../static/svg/skills.svg";
-import Projects from "../../../static/svg/portofolio.svg";
-import footer from "../../../static/svg/wave_link.svg";
+import Home from "../../../../../../../../public/svg/home2.svg";
+import Skills from "../../../../../../../../public/svg/skills.svg";
+import Projects from "../../../../../../../../public/svg/portofolio.svg";
+import footer from "../../../../../../../../public/svg/wave_link.svg";
 import "./NavAncord.css";
 import Image from "next/image";
 

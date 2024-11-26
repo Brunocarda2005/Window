@@ -3,12 +3,12 @@ import "./window.css";
 import Context from "@/components/Context/Context";
 import Icon from "@/components/icon/Icon";
 import { useContext } from "react";
-import imgFolder from "../../static/svg/folder.svg";
-import imgConfig from "../../static/svg/config.svg";
-import imgText from "../../static/svg/document.svg";
-import imgGoogle from "../../static/svg/google.svg";
-import imgProfile from "../../static/svg/Group 10.svg";
-import imgOff from "../../static/svg/off-on-power-svgrepo-com.svg";
+import imgFolder from "../../../../public/svg/folder.svg";
+import imgConfig from "../../../../public/svg/config.svg";
+import imgText from "../../../../public/svg/document.svg";
+import imgGoogle from "../../../../public/svg/google.svg";
+import imgProfile from "../../../../public/svg/Group 10.svg";
+import imgOff from "../../../../public/svg/off-on-power-svgrepo-com.svg";
 import Image from "next/image";
 
 export default function Window() {
@@ -20,13 +20,13 @@ export default function Window() {
         x: StateGlobal.app.x,
         y: StateGlobal.app.y,
         app: "off",
-        data: StateGlobal.app.data
+        data: StateGlobal.app.data,
       },
       aplications: StateGlobal.aplications,
       Google: StateGlobal.Google,
-      Config: StateGlobal.Config
-    })
-  }
+      Config: StateGlobal.Config,
+    });
+  };
   return (
     <main
       className="app__window"
@@ -82,7 +82,14 @@ export default function Window() {
             </div>
           </section>
           <section className="app__window__content__header__off-content">
-            <Image className="app__window__content__header__off-content__btn" src={imgOff} alt="" width={16} height={16} onClick={offPage}/>
+            <Image
+              className="app__window__content__header__off-content__btn"
+              src={imgOff}
+              alt=""
+              width={16}
+              height={16}
+              onClick={offPage}
+            />
           </section>
         </header>
       </section>
