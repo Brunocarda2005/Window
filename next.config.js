@@ -2,7 +2,7 @@ const isGithubPages = process.env.GITHUB_ACTIONS || false;
 
 const nextConfig = {
   output: "export",
-  assetPrefix: isGithubPages ? "/<nombre-del-repositorio>" : "",
+  assetPrefix: isGithubPages ? "/Window" : "",
   images: {
     unoptimized: true,
   },
