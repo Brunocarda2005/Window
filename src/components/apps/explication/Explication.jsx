@@ -7,7 +7,7 @@ import HeaderExp from "./headerExp/HeaderExp";
 import AppComponent from "../appComponent/AppComponent";
 
 export default function Explication() {
-  const { StateGlobal } = useContext(Context); // context para class
+  const { StateGlobal } = useContext(Context);
 
   return (
     <AppComponent name={"text"} data={StateGlobal.aplications.text}>
